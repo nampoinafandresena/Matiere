@@ -1,7 +1,7 @@
 ## Base
     -Semestre (id)
     -Matiere (id, label)
-    -Option(id, label, id_semestre, responsable) --General, Dev, Base de donnee, Web
+    -Options(id, label, id_semestre, responsable) --General, Dev, Base de donnee, Web
     -Groupe(id, id_matiere, id_option, credit)
     -Etudiant(ETU, nom, prenom, mail, tel, date_naissance)
     -Note(id, ETU_etudiant, id_matiere, valeur)
