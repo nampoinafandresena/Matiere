@@ -31,13 +31,13 @@
                 ->select('Matiere.*, IFNULL(MAX('.$this->table.'.valeur), 0) as note')
                 
                 ->join('Matiere', "Matiere.id = " . $this->table . ".id_matiere", 'right')
-                ->join('Groupe', "Matiere.id = Groupe.id_matiere")
-                ->join('Option', "Groupe.id_option = Option.id")
+                ->join('Groupe', "Matiere.id = Groupe.id_matiere", 'left')
+                ->join('Options', "Groupe.id_option = Options.id")
                 
                 ->groupBy('Groupe.id') 
                 
-                ->where("Option.id_semestre", $id_semestre)
-                ->where("Option.id", $id_option)
+                ->where("Options.id_semestre", $id_semestre)
+                ->where("Options.id", $id_option)
                 
                 ->get()
                 ->getResultArray();
