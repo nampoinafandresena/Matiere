@@ -2,7 +2,7 @@ Create database Matiere;
 Use Matiere;
 
 CREATE TABLE Semestre(
-    id INT Primary Key AUTO_INCREMENT
+    id INT Primary Key
 );
 
 CREATE TABLE Matiere(
