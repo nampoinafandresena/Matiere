@@ -25,9 +25,9 @@ INSERT INTO Matiere(label) VALUES
 
 
 INSERT INTO Options(label, id_semestre, responsable) VALUES
-("Developpement", 2, "Razafinjoelina Tahina"),
-("Bases de donnees et Reseaux", 2, "Rakotomalala Vahatriniaina"),
-("Web et Design", 2, "Rabenanahary Rojo");
+("Developpement", 4, "Razafinjoelina Tahina"),
+("Bases de donnees et Reseaux", 4, "Rakotomalala Vahatriniaina"),
+("Web et Design", 4, "Rabenanahary Rojo");
 
 INSERT INTO Groupe(id, id_matiere, id_option, credit) VALUES
 (1, 7, 1, 6),

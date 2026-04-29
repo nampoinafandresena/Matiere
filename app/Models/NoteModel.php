@@ -26,7 +26,7 @@
             ]
         ];
 
-        public function getNoteBySemestreByOption($id_semestre, $id_option) {
+        public function getNoteBySemestreByOption($id_semestre, $id_option, $etu) {
             return $this->db->table($this->table)
                 ->select('Matiere.*, IFNULL(MAX('.$this->table.'.valeur), 0) as note')
                 
@@ -38,6 +38,7 @@
                 
                 ->where("Options.id_semestre", $id_semestre)
                 ->where("Options.id", $id_option)
+                ->where($this->table.".ETU_etudiant", $etu)
                 
                 ->get()
                 ->getResultArray();
